@@ -1,0 +1,11 @@
+.coin-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dice-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

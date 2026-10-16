@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        
+        <title>Guessing Game</title>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+
+    <body>
+
+        <h1>Random Probability</h1>
+        
+        <div class="coin-row">
+            <button onclick="tossCoin()">
+                Coin Flip
+            </button>
+            <p class="coin-result">:</p>
+        </div>
+
+        <div class="dice-row">
+            <button onclick="rollDice()">
+                6 Sided Dice Roll
+            </button>
+            <p class="dice-result">:</p>
+        </div>
+
+        <p>Future functionality: options to increase sides of die, simulate large coin/die events</p>
+
+        <script>
+            function tossCoin(){
+                document.querySelector(".coin-result").textContent = Math.random() < 0.5 ? ": Heads" : ": Tails";
+            }
+
+            function rollDice(){
+                const diceRoll = Math.floor(Math.random() * 6) + 1;
+                document.querySelector(".dice-result").textContent = ": You rolled a " + diceRoll;
+            }
+        </script>
+    </body>
+</html>
