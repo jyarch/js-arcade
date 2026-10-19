@@ -1,14 +1,14 @@
 body{
     background-color: white;
     font-family: Arial;
-    color: white;
+    color: black;
     text-align: center;
 }
 
 hr{
     width: 500px;
     height: 2px;
-    background-color: skyblue;
+    background-color: black;
     border: 0;
 }
 
@@ -17,9 +17,9 @@ hr{
     height: 450px;
     margin: 0 auto;
 
-    background-color: skyblue;
+    background-color: white;
     color: white;
-    border: 6px solid lightblue;
+    border: 7px solid black;
     border-radius: 10px;
 
     display: grid;
@@ -27,7 +27,8 @@ hr{
 }
 
 .game-cell{
-    border: 6px solid lightblue;
+    border: 7px solid black;
+    color: black;
     border-radius: 2px;
     font-size: 100px;
 
@@ -37,17 +38,27 @@ hr{
 }
 
 .winning-game-cell{
-    background-color: white;
-    color: skyblue;
+    background-color: lightgray;
+    color: white;
 }
 
 #game-restart-button{
     height: 50px;
     width: 150px;
-    border: 5px solid lightblue;
+    border: 5px solid black;
     border-radius: 5px;
-    background-color: skyblue;
-    color: white;
+    background-color: white;
+    color: black;
     font-size: 20px;
     margin-top: 40px;
+    cursor: pointer;
+}
+
+#current-player {
+    color: black;
+    font-weight: bold;
+}
+
+p{
+    color: black;
 }

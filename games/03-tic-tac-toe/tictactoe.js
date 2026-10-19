@@ -1,6 +1,7 @@
 let playerO = "O";
 let playerX = "X";
 let currPlayer = playerO;
+let currentPlayerDisplay;
 //               0   1   2   3   4   5   6   7   8
 let gameBoard = ["", "", "", "", "", "", "", "", ""];
 let gameCells;
@@ -20,6 +21,9 @@ window.onload = function(){
     }
     restartGameButton = document.getElementById("game-restart-button");
     restartGameButton.addEventListener("click", restartGame);
+
+    currentPlayerDisplay = document.getElementById("current-player");
+    currentPlayerDisplay.innerHTML = currPlayer;
 }
 
 function placeCell(){
@@ -35,7 +39,7 @@ function placeCell(){
     gameBoard[index] = currPlayer;
 
     currPlayer = (currPlayer == playerO) ? playerX : playerO;
-
+    currentPlayerDisplay.innerText = currPlayer;
     checkWin();
 }
 
@@ -59,9 +63,14 @@ function checkWin(){
 }
 
 function restartGame(){
+
+    //base board settings
     gameOver = false;
     gameBoard = ["", "", "", "", "", "", "", "", ""];
+    currPlayer = playerO;
+    currentPlayerDisplay.innerText = currPlayer;    
 
+    //reset all cells to base
     for(let cell of gameCells){
         cell.innerText = "";
         cell.classList.remove("winning-game-cell");
